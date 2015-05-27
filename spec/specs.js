@@ -12,15 +12,15 @@ describe('isVowel', function() {
   });
 });
 
-describe('findQu', function() {
-  it ("regognizes when q is followed by u", function() {
-    expect(findQu("squeal")).to.eql(['q']);
-  });
-});
+// describe('findQu', function() {
+//   it ("regognizes when q is followed by u", function() {
+//     expect(findQu("squeal")).to.eql(['q']);
+//   });
+// });
 
 describe('consonantShuffle', function() {
   it("moves all consecutive consonants to the end of the word", function() {
-    expect(consonantShuffle("shuffle")).to.equal("ufflesh");
+    expect(consonantShuffle("queen")).to.equal("eenqu");
   });
 });
 
