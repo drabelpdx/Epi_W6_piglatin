@@ -1,4 +1,8 @@
-var pigLatinize = function(word) {
+var pigLatinize = function(sentence) {
+  return sentence.replace(/\w+/g, pigLatinizeWord)
+};
+
+var pigLatinizeWord = function(word) {
   var pig = "ay"
   if((isVowel(word))){
   return word.concat(pig);
@@ -6,8 +10,6 @@ var pigLatinize = function(word) {
    return consonantShuffle(word).concat(pig);
 }
 };
-
-
 
 var isVowel = function(word) {
   var vowels = ["a", "e", "i", "o", "u"];
@@ -22,13 +24,6 @@ var isVowel = function(word) {
   return false;
 };
 
-// var findQu = function(word) {
-//   var myRe = /q(?=u)/g;
-//
-//   var found = word.match(myRe);
-//   return found;
-//
-// };
 
 var consonantShuffle = function(word) {
   var letters = word.split("")
